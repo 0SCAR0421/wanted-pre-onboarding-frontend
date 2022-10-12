@@ -89,7 +89,6 @@ const Signup = ({ handleMode }) => {
         >
           회원가입
         </SubmitButton>
-        {console.log(state.email && state.password)}
         <div>
           <span>아이디가 있으신가요?</span>
           <button onClick={handleMode}>로그인</button>
