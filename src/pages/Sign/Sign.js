@@ -11,9 +11,9 @@ const Sign = () => {
   return (
     <div>
       {mode ? (
-        <Signup handleMode={handleMode} />
-      ) : (
         <Signin handleMode={handleMode} />
+      ) : (
+        <Signup handleMode={handleMode} />
       )}
     </div>
   );
