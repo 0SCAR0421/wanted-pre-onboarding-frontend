@@ -83,11 +83,13 @@ const Signup = ({ handleMode }) => {
             />
           </div>
         </SignFormContainer>
-        {state.email && state.password ? (
-          <SubmitButton onClick={handleSubmit}>회원가입</SubmitButton>
-        ) : (
-          <div className="disable"></div>
-        )}
+        <SubmitButton
+          state={state.email && state.password}
+          onClick={handleSubmit}
+        >
+          회원가입
+        </SubmitButton>
+        {console.log(state.email && state.password)}
         <div>
           <span>아이디가 있으신가요?</span>
           <button onClick={handleMode}>로그인</button>

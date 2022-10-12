@@ -6,13 +6,6 @@ export const SignContainer = styled(CommonContainer)`
     font-size: var(--font-size2);
     color: var(--text4);
 
-    & > div.disable {
-      width: 300px;
-      height: 40px;
-      margin-top: calc(var(--space1) * 2 - (var(--space3) / 2));
-      margin-bottom: calc(var(--space2) - (var(--space3) / 2));
-    }
-
     & > div:last-child {
       display: flex;
       justify-content: center;
@@ -57,6 +50,6 @@ export const SubmitButton = styled.button`
 
   &:hover {
     background: rgba(188, 188, 188, 0.3);
-    cursor: pointer;
+    cursor: ${(props) => (props.state ? 'pointer' : 'not-allowed')};
   }
 `;
