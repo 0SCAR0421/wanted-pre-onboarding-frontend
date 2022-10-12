@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,4 +7,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --text1: #999;
+  --text2: #777;
+  --text3: #555;
+  --text4: #333;
+  --font-size1: 16px;
+  --font-size2: 13px;
+  --font-size3: 9px;
+  --space1: 30px;
+  --space2: 20px;
+  --space3: 10px;
+  --border-radius1: 8px;
+  --border-radius2: 4px;
+  --border-radius3: 2px;
+  --input-border: #5e5e5e;
+  --shadow1: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
