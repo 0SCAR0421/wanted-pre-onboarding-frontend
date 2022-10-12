@@ -32,4 +32,4 @@
 
 ## 배포링크
 
-https://wanted-pre-onboarding-frontend-56mume4ec-0scar0421.vercel.app/
+https://wanted-pre-onboarding-frontend-nine.vercel.app/
