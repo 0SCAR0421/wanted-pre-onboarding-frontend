@@ -29,7 +29,9 @@ const TodoItemInput = styled(CommonInput)`
   font-size: var(--font-size1);
 `;
 
-const TodoItemButtonBox = styled.div``;
+const TodoItemButtonBox = styled.div`
+  display: flex;
+`;
 
 const TodoItem = ({
   id,
@@ -47,6 +49,13 @@ const TodoItem = ({
     });
   };
 
+  const handleModifyCheck = () => {
+    setTodoData((prev) => {
+      return { ...prev, isCompleted: !prev.isCompleted };
+    });
+    handleModifyTodo(id, { ...todoData, isCompleted: !todoData.isCompleted });
+  };
+
   const handleChangeMode = () => {
     setMode(!mode);
     setTodoData((prev) => {
@@ -60,12 +69,17 @@ const TodoItem = ({
         <>
           <TodoItemContentBox>
             <TodoItemInput
+              type="text"
               onChange={handleModifyData}
               value={todoData.todo}
             ></TodoItemInput>
           </TodoItemContentBox>
           <TodoItemButtonBox>
-            <span> {isCompleted ? 'true' : 'false'}</span>
+            <input
+              type="checkbox"
+              onChange={handleModifyCheck}
+              checked={todoData.isCompleted}
+            />
             <TodoButton
               onClick={() => {
                 handleModifyTodo(id, todoData);
@@ -83,7 +97,11 @@ const TodoItem = ({
             <p>{todo} </p>
           </TodoItemContentBox>
           <TodoItemButtonBox>
-            <span> {isCompleted ? 'true' : 'false'}</span>
+            <input
+              type="checkbox"
+              onChange={handleModifyCheck}
+              checked={todoData.isCompleted}
+            />
             <TodoButton onClick={handleChangeMode}>수정</TodoButton>
             <TodoButton
               onClick={() => {
