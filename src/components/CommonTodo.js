@@ -12,9 +12,11 @@ export const TodoFormContainer = styled.div`
   width: 450px;
   display: flex;
   margin-bottom: var(--space1);
+  justify-content: space-between;
 `;
 
 export const TodoCommonInput = styled(CommonInput)`
+  width: 397px;
   margin-top: 0;
 `;
 
